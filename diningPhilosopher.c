@@ -8,7 +8,7 @@
 
 //pthread_mutex_t lock;
 
-void philosopher(void *i)
+void *philosopher(void *i)
 {
 	while(1)
 	{
@@ -47,7 +47,7 @@ int main()
 	{
 		pos[i] = i;
 		//create thread corresponding to each philosopher
-		pthread_create(&thread[i], NULL,(void *) &philosopher, (void *) &pos[i]);
+		pthread_create(&thread[i], NULL,philosopher, (int *) &pos[i]);
 	}
 	for (i = 0; i < N; i++)
 	{
