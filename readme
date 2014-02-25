@@ -1,0 +1,45 @@
+Files Included :
+
+.c Files :
+
+	1. diningPhilosopher.c
+	2. monitor.c
+
+.h Files :
+
+	1. monitor.h
+
+Other files:
+	
+	1. Makefile
+	2. readme file
+
+Compiling:
+	
+	The Makefile contains the commands for compiling the source files.
+	To compile enter the following command.
+
+	$ make
+	
+	This will create diningPhilosopher.o, monitor.o, and an executable file philosopher_yj
+
+Clean: 
+
+	To clean enter the following command.
+
+	$ make clean
+
+	This will remove the obj files and the executable file philosopher_yj
+
+Execute:
+
+	To execute enter the following
+	
+	$ ./philosopher_yj
+
+
+Cases Handled :
+
+	-solution for Dining Philosophers problem is implemented using monitor.
+	-Monitor implemented using semaphores.
+	-starvation problem also handled using turn variable corresponding to each chopstick.
